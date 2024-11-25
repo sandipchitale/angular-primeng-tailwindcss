@@ -12,10 +12,12 @@ function createWindow(): BrowserWindow {
 
   // Create the browser window.
   win = new BrowserWindow({
-    x: 0,
-    y: 0,
-    width: size.width,
-    height: size.height,
+    width: 1200,
+    height: 900,
+    frame: false,
+    roundedCorners: true,
+    center: true,
+    resizable: false,
     webPreferences: {
       nodeIntegration: true,
       allowRunningInsecureContent: (serve),
@@ -30,6 +32,8 @@ function createWindow(): BrowserWindow {
     require('electron-reloader')(module);
     win.loadURL('http://localhost:4200');
   } else {
+    // win.webContents.openDevTools();
+
     // Path when running electron executable
     let pathIndex = './index.html';
 

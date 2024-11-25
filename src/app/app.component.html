@@ -1,1 +1,39 @@
-<router-outlet></router-outlet>
+
+<div class="wrapper">
+  <p-toolbar class="drag self-start">
+    <ng-template #start>
+      <i class="pi pi-prime text-2xl"></i><span class="ml-4 font-bold text-2xl">Angular 18 | PrimeNG 18 | TailwindCSS</span>
+    </ng-template>
+    <ng-template #center>
+    </ng-template>
+    <ng-template #end>
+      <button pButton class="ml-auto no-drag" severity="success" (click)="quit()"><i class="pi pi-times"></i></button>
+    </ng-template>
+  </p-toolbar>
+  <main>
+    <p-tabs class="no-drag" value="0">
+      <p-tablist>
+        <p-tab value="0">Angular</p-tab>
+        <p-tab value="1">PrimeNG</p-tab>
+        <p-tab value="3">TailwindCSS</p-tab>
+      </p-tablist>
+      <p-tabpanels>
+        <p-tabpanel value="0">
+          <p class="m-0">
+            <a class="hover:underline" href="https://v18.angular.dev/">Angular 18</a>
+          </p>
+        </p-tabpanel>
+        <p-tabpanel value="1">
+          <p class="m-0">
+            <a class="hover:underline" href="https://v18.primeng.org/">PrimeNG 18</a>
+          </p>
+        </p-tabpanel>
+        <p-tabpanel value="2">
+          <p class="m-0">
+            <a class="hover:underline" href="https://tailwindcss.com/">TailwindCSS</a>
+          </p>
+        </p-tabpanel>
+      </p-tabpanels>
+    </p-tabs>
+  </main>
+</div>
